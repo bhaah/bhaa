@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6efe2;
+  --foreground: #1f2f35;
+  --surface: #fffaf0;
+  --surface-strong: #f0dfc0;
+  --accent: #cc5d3d;
+  --accent-secondary: #2e7a78;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
+  --font-mono: var(--font-manrope);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, #ffe5c9 0%, rgba(255, 229, 201, 0) 35%),
+    radial-gradient(circle at 80% 15%, #dcefe6 0%, rgba(220, 239, 230, 0) 30%),
+    linear-gradient(180deg, #f8f0e3 0%, #f4ead8 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.title-font {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.grain {
+  background-image: radial-gradient(rgba(41, 47, 53, 0.08) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+.soft-card {
+  border: 1px solid rgba(31, 47, 53, 0.1);
+  background: linear-gradient(145deg, rgba(255, 250, 240, 0.93), rgba(255, 245, 227, 0.86));
+  box-shadow: 0 20px 45px rgba(31, 47, 53, 0.08);
+}
+
+.highlight-stroke {
+  text-shadow: 0 1px 0 rgba(204, 93, 61, 0.2);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: rise 0.7s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
